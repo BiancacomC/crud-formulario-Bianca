@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Cadastrar</h1>
+    <div class=".col-8 m-auto pt-2 pb-2 text-center">
+        <form name="form" id="form" action="/create/" method="post">
+            {% csrf_token %}
+            <div class=".form-group mt-4">Nome: {{form.nome_aluno}}</div>
+            <div class=".form-group mt-4">Idade: {{form.idade_aluno}}</div>
+            <div class=".form-group mt-4">Curso: {{form.curso_aluno}}</div>
+            <input type="submit" class="btn btn-success" value="Salvar">
+        </form>
+    </div>
+</body>
+</html>
